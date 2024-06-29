@@ -104,25 +104,78 @@
         </div>
       </a></div>
     <div
-      class="mx-auto px-8 sm:px-16 md:px-24 lg:max-w-4xl lg:px-0 2xl:max-w-6xl"
+      class="mx-auto px-8 sm:px-16 md:px-24 lg:max-w-4xl lg:px-0 2xl:max-w-6xl mb-24"
     >
-      <h1>gifs</h1>
-<p class='mb-5'>Nowadays there's enough "generative art" permeating the internet to drive you crazy.</p>
+      
+<script>
+  const loadImage = (name) => {
+    const url = `https://storage.googleapis.com/moon-bear/gifs/${name.replace(".jpg", ".gif")}`;
+    const image = new Image(540, 540);
+    image.style.backgroundColor = "#000000";
+    document.getElementById("gifcontainer").replaceChildren();
+    document.getElementById("gifcontainer").appendChild(image);
+    document.getElementById("gifcontainer").style.display = "flex";
+    document.getElementById("gifcontainer").onclick = () => {
+      document.getElementById("gifcontainer").style.display = "none";
+    };
+    image.src = url;
+  };
+</script>
 
-<div class="grid grid-cols-3 2xl:grid-cols-5 gap-2 sm:gap-4 lg:gap-6"><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div><div class='aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800'>
-  </div></div>
+<h1>gifs</h1>
+<p class="mb-5">
+  These are some gifs I made with
+  <a href="https://processing.org/">Processing</a> in college. Even though
+  today's internet is permeated with enough "generative art" to drive anyone
+  crazy, I'm keeping these around.
+</p>
+
+<div class="grid grid-cols-3 2xl:grid-cols-5 gap-2 sm:gap-4 lg:gap-6"><img
+    class="aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800 hover:brightness-125 cursor-pointer"
+    src="010.jpg"
+    onclick="loadImage('010.jpg')"
+  /><img
+    class="aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800 hover:brightness-125 cursor-pointer"
+    src="009.jpg"
+    onclick="loadImage('009.jpg')"
+  /><img
+    class="aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800 hover:brightness-125 cursor-pointer"
+    src="008.jpg"
+    onclick="loadImage('008.jpg')"
+  /><img
+    class="aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800 hover:brightness-125 cursor-pointer"
+    src="007.jpg"
+    onclick="loadImage('007.jpg')"
+  /><img
+    class="aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800 hover:brightness-125 cursor-pointer"
+    src="006.jpg"
+    onclick="loadImage('006.jpg')"
+  /><img
+    class="aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800 hover:brightness-125 cursor-pointer"
+    src="005.jpg"
+    onclick="loadImage('005.jpg')"
+  /><img
+    class="aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800 hover:brightness-125 cursor-pointer"
+    src="004.jpg"
+    onclick="loadImage('004.jpg')"
+  /><img
+    class="aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800 hover:brightness-125 cursor-pointer"
+    src="003.jpg"
+    onclick="loadImage('003.jpg')"
+  /><img
+    class="aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800 hover:brightness-125 cursor-pointer"
+    src="002.jpg"
+    onclick="loadImage('002.jpg')"
+  /><img
+    class="aspect-square rounded-md bg-zinc-300 dark:bg-zinc-800 hover:brightness-125 cursor-pointer"
+    src="001.jpg"
+    onclick="loadImage('001.jpg')"
+  /></div>
+
+<div
+  class="absolute top-0 left-0 w-screen h-screen items-center justify-center hidden bg-zinc-200/40 dark:bg-zinc-950/40"
+  id="gifcontainer"
+></div>
 
     </div>
   </body>
