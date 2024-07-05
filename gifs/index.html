@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
-    <title></title>
+    <title>the gifs</title>
   </head>
   <body>
     <div class="mb-8 mt-6 flex items-center justify-center space-x-4 py-4"><a href='/'>
@@ -112,11 +112,12 @@
     const url = `https://storage.googleapis.com/moon-bear/gifs/${name.replace(".jpg", ".gif")}`;
     const image = new Image(540, 540);
     image.style.backgroundColor = "#000000";
-    document.getElementById("gifcontainer").replaceChildren();
-    document.getElementById("gifcontainer").appendChild(image);
-    document.getElementById("gifcontainer").style.display = "flex";
-    document.getElementById("gifcontainer").onclick = () => {
-      document.getElementById("gifcontainer").style.display = "none";
+    const c = document.getElementById("gc");
+    c.replaceChildren();
+    c.appendChild(image);
+    c.style.display = "flex";
+    c.onclick = () => {
+      c.style.display = "none";
     };
     image.src = url;
   };
@@ -174,7 +175,7 @@
 
 <div
   class="absolute top-0 left-0 w-screen h-screen items-center justify-center hidden bg-zinc-200/40 dark:bg-zinc-950/40"
-  id="gifcontainer"
+  id="gc"
 ></div>
 
     </div>
